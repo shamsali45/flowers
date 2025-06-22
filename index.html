@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Shams Store | شمس ستور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- خط عربي أنيق -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* reset عام */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+
+    /* خلفية متحركة بألوان جذابة */
+    body{
+      background:linear-gradient(135deg,#000428,#004e92,#ff416c,#ff4b2b,#00c97c);
+      background-size:500% 500%;
+      animation:bgMove 12s ease infinite;
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:30px 15px;
+    }
+    @keyframes bgMove{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    /* شريط البحث */
+    .search-wrapper{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      margin-bottom:40px;
+      animation:fadeIn 1.2s ease;
+    }
+    .search-box{
+      display:flex;
+      background:#fff;
+      border-radius:40px;
+      overflow:hidden;
+      max-width:550px;
+      width:100%;
+      box-shadow:0 6px 20px rgba(0,0,0,.35);
+    }
+    .search-box input{
+      flex:1;
+      border:none;
+      outline:none;
+      padding:15px 22px;
+      font-size:17px;
+      color:#333;
+    }
+    .search-box button{
+      border:none;
+      padding:15px 25px;
+      background:linear-gradient(45deg,#ff416c,#ff4b2b);
+      color:#fff;
+      cursor:pointer;
+      transition:.3s;
+      font-size:17px;
+    }
+    .search-box button:hover{
+      background:linear-gradient(45deg,#ff6a88,#ff4b2b);
+    }
+
+    /* العنوان والنص التسويقي */
+    h1{
+      font-size:38px;
+      margin-bottom:15px;
+      background:linear-gradient(90deg,#00ffcc,#ff0099);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-align:center;
+      animation:slideDown .9s ease;
+    }
+    p.tagline{
+      font-size:20px;
+      margin-bottom:8px;
+      text-align:center;
+      animation:fadeIn 1.6s ease;
+    }
+
+    @keyframes slideDown{from{opacity:0;transform:translateY(-25px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+    /* مثال محتوى بطاقات */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:22px;
+      width:100%;
+      max-width:1100px;
+      margin-top:35px;
+      animation:fadeIn 2.2s ease;
+    }
+    .item{
+      background:rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      transition:transform .3s;
+      box-shadow:0 10px 25px rgba(0,0,0,.3);
+    }
+    .item:hover{transform:scale(1.05)}
+    .item img{width:100%;border-radius:12px;margin-bottom:12px}
+    .item .price{font-size:18px;font-weight:bold;color:#ffd700}
+
+    @media(max-width:600px){
+      h1{font-size:30px}
+      .search-box input{font-size:15px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- شريط البحث في المنتصف بالأعلى -->
+  <div class="search-wrapper">
+    <div class="search-box">
+      <input type="text" placeholder="ابحث هنا عن أفضل العروض…">
+      <button>🔍</button>
+    </div>
+  </div>
+
+  <!-- اسم المتجر وكلمتين حلوين -->
+  <h1>Shams Store ☀</h1>
+  <p class="tagline">استكشف تشكيلات مذهلة بأسعار لا تُقاوَم.</p>
+  <p class="tagline">تسوق الآن - العروض الحصرية بانتظارك!</p>
+
+  <!-- أمثلة للمنتجات (يمكنك استبدال الصور والأسعار) -->
+  <div class="gallery">
+    <div class="item">
+      <img src="Sh1.jpg" alt="منتج 1">
+      <div class="price">100 جنيه</div>
+    </div>
+    <div class="item">
+      <img src="Sh2.jpg" alt="منتج 2">
+      <div class="price">100 جنيه</div>
+    </div>
+    <div class="item">
+      <img src="Sh3.jpg" alt="منتج 3">
+      <div class="price">100 جنيه</div>
+    </div>
+    <div class="item">
+      <img src="Sh4.jpg" alt="منتج 4">
+      <div class="price">100 جنيه</div>
+    </div>
+    <div class="item">
+      <img src="Sh5.jpg" alt="منتج 5">
+      <div class="price">130 جنيه</div>
+    </div>
+    <div class="item">
+      <img src="Sh6.jpg" alt="منتج 6">
+      <div class="price">175 جنيه</div>
+    </div>
+     <div class="item">
+      <img src="Sh7.jpg" alt="منتج 6">
+      <div class="price">175 جنيه</div>
+    </div>
+     <div class="item">
+      <img src="Sh8.jpg" alt="منتج 6">
+      <div class="price">175 جنيه</div>
+    </div>
+     <div class="item">
+      <img src="Sh9.jpg" alt="منتج 6">
+      <div class="price">200 جنيه</div>
+    </div>
+     <div class="item">
+      <img src="Sh10.jpg" alt="منتج 6">
+      <div class="price">200 جنيه</div>
+    </div>
+  </div>
+<a href="https://wa.me/201285950532" target="_blank" class="whatsapp-button">
+  💬 تواصل معنا على واتساب
+</a>
+
+<style>
+  .whatsapp-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    background: #1ebf57;
+  }
+</style>
+<a href="https://www.instagram.com/shams_flowers?igsh=MXh1ZTNsbWc0OGFuaQ==" target="_blank" class="instagram-button">
+  📸 تابعنا على إنستجرام
+</a>
+<style>
+  .instagram-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #e1306c, #c13584);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+  }
+
+  .instagram-button:hover {
+    background: linear-gradient(45deg, #ff4e94, #e1306c);
+  }
+</style>
+</body>
+</html>
